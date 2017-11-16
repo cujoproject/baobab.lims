@@ -7,8 +7,8 @@ USER root
 RUN apt-get update \
     && apt-get install -y --no-install-recommends libffi-dev git gcc libc6-dev gcc-multilib libjpeg-dev zlib1g-dev libcairo2-dev pango1.0-tests
 USER plone
-RUN git clone https://github.com/BaobabLims/baobab.lims.git \
-    && git clone https://github.com/BaobabLims/bika.lims.git \
+RUN git clone https://github.com/cujoproject/baobab.lims.git \
+    && git clone https://github.com/cujoproject/bika.lims.git \
     && git clone https://github.com/BaobabLims/graphite.theme.git
 
 COPY buildout.cfg /plone/instance/buildout.cfg
